@@ -8,7 +8,7 @@ There are two main sections, Creating the development environment and Joining ex
 
 1. Create a directory dcDemo somewhere on your local machine
 
-    - cd $HOME/some/place  (NOTE: this is up to you where you want to put it, regardless you will use it later)
+    - cd $HOME/some/place  (NOTE: this is up to you where you want to put the demo code)
     - mkdir dcDemo
     - cd dcDemo
     - mkdir utils apps
