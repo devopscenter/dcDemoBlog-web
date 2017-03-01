@@ -139,7 +139,7 @@ At this point, a good suggestion would be to open another terminal window such t
 This way you can run the commands to create the django project inside the container, and then once they are created you can edit the files on
 your host using your normal editing tools.  The changes will show up in the container and the hosts because they refer to the same place.
 
-To enter the container:
+    To enter the container:
 
         ./enter-container.sh
             - Select the web container
