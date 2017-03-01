@@ -10,7 +10,7 @@ There are two main sections, Creating the development environment and Joining ex
 
     - cd $HOME/some/place 
 
-        (NOTE: this is up to you where you want to put the demo code, but for this document it will be in the users home directory)
+        (NOTE: this is up to you where you want to put the demo code, but for this document it will be in the users home directory.  So: cd ~)
 
     - mkdir dcDemo
     - cd dcDemo
