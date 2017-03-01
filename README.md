@@ -135,7 +135,6 @@ github.
 
 5. When the containers start up, the web container will have the dcDemoBlog/dcDemoBlog-web directory hosted as a volume in the container and
 the login directory will correspond with that directory.  The login directory is: /data/deploy/current   
-
 At this point, a good suggestion would be to open another terminal window such that you can log into the web container in one terminal window.
 This way you can run the commands to create the django project inside the container, and then once they are created you can edit the files on
 your host using your normal editing tools.  The changes will show up in the container and the hosts because they refer to the same place.
