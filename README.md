@@ -78,7 +78,7 @@ NOTE: in order for the django server to show up in the browser, when you execute
     python manage.py runserver 0.0.0.0:8000
 
 
-After getting the blog up and working the next step was to exit the containers
+After getting the blog up and working the next step is to exit the containers
 and push the work that was done in dcDemoBlog-web and dcDemoBlog-utils to
 github.  
 
