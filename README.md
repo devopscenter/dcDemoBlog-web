@@ -124,6 +124,7 @@ github.
         - we use papertrail for a central logging system so the default values in the SYSLOG_ entries refer to that system but you
           put your logging system in there.  They do need to have something in them, hence the defaults.
 
+    - Go back to the dcUtils directory 
     - execute:
 
         ./deployenv.sh
