@@ -141,27 +141,27 @@ your host using your normal editing tools.  The changes will show up in the cont
 
 To enter the container:
 
-    ./enter-container.sh
-        - Select the web container
+        ./enter-container.sh
+            - Select the web container
 
-You will need to create the database the very first time you bring down the images and start the containers as the database will be empty.  
-Outside of this demo, you would restore a database from a backup at this point to get it up to speed. In this case we want to start with an
-empty database, but we at least need to create one.  So type:
+    You will need to create the database the very first time you bring down the images and start the containers as the database will be empty.  
+    Outside of this demo, you would restore a database from a backup at this point to get it up to speed. In this case we want to start with an
+    empty database, but we at least need to create one.  So type:
 
-    echo "create database dcdemoblog" | psql -U postgres
+        echo "create database dcdemoblog" | psql -U postgres
 
-and then we need to tell the django project about the database, so type:
+    and then we need to tell the django project about the database, so type:
 
-    - python manage.py syncdb
+        - python manage.py syncdb
 
-        - answer yes to create a new superuser for the app
-        - Username press return to accept root or type in what you want
-        - Press enter for the email to leave blank or put in your email address
-        - Password put in something that you will remember
+            - answer yes to create a new superuser for the app
+            - Username press return to accept root or type in what you want
+            - Press enter for the email to leave blank or put in your email address
+            - Password put in something that you will remember
 
-    Now run the server:
+        Now run the server:
 
-        python manage.py runserver 0.0.0.0:8000
+            python manage.py runserver 0.0.0.0:8000
 
 6. and when you are done exit from the container and stop the demo containers:
     cd dcUtils
