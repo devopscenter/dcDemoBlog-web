@@ -6,7 +6,7 @@ There are two main sections, Creating the development environment and Joining ex
 
 ### Creating the environment
 
-1. Create a directory dcDemo somewhere on your local machine 
+1. Create a directory dcDemo somewhere on your local machine
 
     - cd $HOME/some/place  (NOTE: this is up to you where you want to put it, regardless you will use it later)
     - mkdir dcDemo
@@ -29,39 +29,39 @@ There are two main sections, Creating the development environment and Joining ex
         --command (-c)       => the command, in this case create
 
     So type (NOTE: use the path created in step 1):
-    
-    - ./manageApp.py -a dcDemoBlog -d $HOME/some/place/dcDemo/apps -c create 
 
-        - accept the naming of the web portion of the appliction (default appName-web => dcDemoBlog-web)
+    - ./manageApp.py -a dcDemoBlog -d $HOME/some/place/dcDemo/apps -c create
+
+        - accept the naming of the web portion of the application (default appName-web => dcDemoBlog-web)
         - enter  000000 as the unique stack name as this is the image that has all the appropriate python/django code already installed
 
-3. Now create the enviornment variables that are specific to our environment. 
+3. Now create the environment variables that are specific to our environment.
 
     - edit dcDemoBlog-utils/environments/personal.env => change dcUTILS value as appropriate
     - edit dcDemoBlog-utils/environments/personal.env => change LOG_NAME value as appropriate
     - edit dcDemoBlog-utils/environments/local.env => change SYSLOG entries as appropriate
-        - we use papertrail for a central logging system so the default values in the SYSLOG_ entries refer to that system but you 
+        - we use papertrail for a central logging system so the default values in the SYSLOG_ entries refer to that system but you
           put your logging system in there.  They do need to have something in them, hence the defaults.
 
     - execute:
 
-        ./deployenv.sh 
+        ./deployenv.sh
 
 4. And start the containers:
 
        ./start.sh
 
-5. When the containers start up, the web container will have the dcDemoBlog/dcDemoBlog-web directory hosted as a volume in the container and 
+5. When the containers start up, the web container will have the dcDemoBlog/dcDemoBlog-web directory hosted as a volume in the container and
 the login directory will correspond with that directory.  The login directory is: /data/deploy/current   
-When you log in there won't be anything in that directory since there isn't anything in the dcDemoBlog/dcDemoBlog-web directory.  At this point, 
-a good suggestion would be to open another terminal window such that you can log into the web container in one terminal window.  This way you 
+When you log in there won't be anything in that directory since there isn't anything in the dcDemoBlog/dcDemoBlog-web directory.  At this point,
+a good suggestion would be to open another terminal window such that you can log into the web container in one terminal window.  This way you
 can run the commands to create the django project inside the container, and then once they are created you can edit the files on your host using
 your normal editing tools.  The changes will show up in the container and the hosts because they refer to the same place.
 
 To enter the container:
 
-    ./enter-container.sh 
-        - Select the web container
+./enter-container.sh
+    - Select the web container
 
 For the dcDemoBlog I took a sample django blog tutorial and did all the steps directly in the container.
 For this demo a simple django blog will be created from a tutorial found at:
@@ -79,7 +79,7 @@ github.
 
 ### Joing existing development
 
-1. Create a directory dcDemo somewhere on your local machine 
+1. Create a directory dcDemo somewhere on your local machine
 
     - cd $HOME/some/place  (NOTE: this is up to you where you want to put it, regardless you will use it later)
     - mkdir dcDemo
@@ -104,30 +104,30 @@ github.
         --utilsURL           => the github URL for the application utils content
 
     So type (NOTE: use the path created in step 1):
-    
+
         ./manageApp.py -a dcDemoBlog -d ~/dcDemo/apps -c join --appURL \
             https://github.com/devopscenter/dcDemoBlog-web.git --utilsURL \
             https://github.com/devopscenter/dcDemoBlog-utils.git
 
 
-3. Now create the enviornment variables that are specific to our environment. 
+3. Now create the environment variables that are specific to our environment.
 
     - edit dcDemoBlog-utils/environments/personal.env => change dcUTILS value as appropriate
     - edit dcDemoBlog-utils/environments/personal.env => change LOG_NAME value as appropriate
     - edit dcDemoBlog-utils/environments/local.env => change SYSLOG entries as appropriate
-        - we use papertrail for a central logging system so the default values in the SYSLOG_ entries refer to that system but you 
+        - we use papertrail for a central logging system so the default values in the SYSLOG_ entries refer to that system but you
           put your logging system in there.  They do need to have something in them, hence the defaults.
 
     - execute:
 
-        ./deployenv.sh 
+        ./deployenv.sh
 
 4. And start the containers:
 
        ./start.sh
 
 
-5. When the containers start up, the web container will have the dcDemoBlog/dcDemoBlog-web directory hosted as a volume in the container and 
+5. When the containers start up, the web container will have the dcDemoBlog/dcDemoBlog-web directory hosted as a volume in the container and
 the login directory will correspond with that directory.  The login directory is: /data/deploy/current   
 At this point, a good suggestion would be to open another terminal window such that you can log into the web container in one terminal window.
 This way you can run the commands to create the django project inside the container, and then once they are created you can edit the files on
@@ -135,14 +135,14 @@ your host using your normal editing tools.  The changes will show up in the cont
 
 To enter the container:
 
-    ./enter-container.sh 
+    ./enter-container.sh
         - Select the web container
 
 You will need to create the database the very first time you bring down the images and start the containers as the database will be empty.  
 Outside of this demo, you would restore a database from a backup at this point to get it up to speed. In this case we want to start with an
-empty database, but we at least need to creat one.  So type:
+empty database, but we at least need to create one.  So type:
 
-    echo "create databaes dcdemoblog" | psql -U postgres 
+    echo "create database dcdemoblog" | psql -U postgres
 
 and then we need to tell the django project about the database, so type:
 
@@ -160,4 +160,3 @@ and then we need to tell the django project about the database, so type:
 6. and when you are done exit from the container and stop the demo containers:
     cd dcUtils
     ./stop.sh
-
