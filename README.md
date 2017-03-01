@@ -60,8 +60,10 @@ your normal editing tools.  The changes will show up in the container and the ho
 
 To enter the container:
 
-./enter-container.sh
-    - Select the web container
+    -execute:
+
+        ./enter-container.sh
+            - Select the web container
 
 For the dcDemoBlog I took a sample django blog tutorial and did all the steps directly in the container.
 For this demo a simple django blog will be created from a tutorial found at:
