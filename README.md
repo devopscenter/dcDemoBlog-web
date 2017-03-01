@@ -83,7 +83,7 @@ and push the work that was done in dcDemoBlog-web and dcDemoBlog-utils to
 github.  
 
 
-### Joing existing development
+### Joining existing development
 
 1. Create a directory dcDemo somewhere on your local machine
 
