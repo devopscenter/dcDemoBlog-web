@@ -8,7 +8,8 @@ There are two main sections, Creating the development environment and Joining ex
 
 1. Create a directory dcDemo somewhere on your local machine
 
-    - cd $HOME/some/place  (NOTE: this is up to you where you want to put the demo code)
+    - cd $HOME/some/place 
+            (NOTE: this is up to you where you want to put the demo code, but for this document it will be in the users home directory)
     - mkdir dcDemo
     - cd dcDemo
     - mkdir utils apps
@@ -30,7 +31,7 @@ There are two main sections, Creating the development environment and Joining ex
 
     So type (NOTE: use the path created in step 1):
 
-    - ./manageApp.py -a dcDemoBlog -d $HOME/some/place/dcDemo/apps -c create
+    - ./manageApp.py -a dcDemoBlog -d ~/dcDemo/apps -c create
 
         - accept the naming of the web portion of the application (default appName-web => dcDemoBlog-web)
         - enter  000000 as the unique stack name as this is the image that has all the appropriate python/django code already installed
