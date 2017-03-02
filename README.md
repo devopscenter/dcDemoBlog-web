@@ -79,12 +79,12 @@ http://www.creativebloq.com/netmag/get-started-django-7132932
 
 NOTES: 
 
-    - When running the command to start the django project, go to another directory (say, /tmp) and run
+- When running the command to start the django project, go to another directory (say, /tmp) and run
     the django-admin.py command in the container as:
 
-            django-admin.py startproject dcDemoBlog /data/deploy/current
+        django-admin.py startproject dcDemoBlog /data/deploy/current
 
-    - In order for the django server to show up in the browser, when you execute the runserver add 0.0.0.0:8000:
+- In order for the django server to show up in the browser, when you execute the runserver add 0.0.0.0:8000:
 
         python manage.py runserver 0.0.0.0:8000
 
