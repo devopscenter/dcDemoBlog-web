@@ -178,5 +178,6 @@ your host using your normal editing tools.  The changes will show up in the cont
             python manage.py runserver 0.0.0.0:8000
 
 6. and when you are done exit from the container and stop the demo containers:
+
     cd dcUtils
     ./stop.sh
