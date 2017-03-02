@@ -179,5 +179,5 @@ your host using your normal editing tools.  The changes will show up in the cont
 
 6. and when you are done exit from the container and stop the demo containers:
 
-        cd dcUtils
+        cd .../dcUtils
         ./stop.sh
