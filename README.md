@@ -1,6 +1,6 @@
 ### Getting Started
 This is the main repository for the devops.center demo.  The intent is to show how to use our utilities
-to bring up a local development environment using docker containers.  
+to bring up a local development environment using docker containers.
 
 There are two main sections, Creating the development environment and Joining existing development
 
@@ -8,7 +8,7 @@ There are two main sections, Creating the development environment and Joining ex
 
 1. Create a directory dcDemo somewhere on your local machine
 
-    - cd $HOME/some/place 
+    - cd $HOME/some/place
 
         (NOTE: this is up to you where you want to put the demo code, but for this document it will be in the users home directory.  So: cd ~)
 
@@ -55,9 +55,9 @@ There are two main sections, Creating the development environment and Joining ex
        ./start.sh
 
 5. When the containers start up, the web container will have the dcDemoBlog/dcDemoBlog-web directory hosted as a volume in the container and
-the login directory will correspond with that directory.  
+the login directory will correspond with that directory.
 
-The login directory is: /data/deploy/current   
+The login directory is: /data/deploy/current
 
 
 When you log in there won't be anything in that directory since there isn't anything in the dcDemoBlog/dcDemoBlog-web directory.  At this point,
@@ -77,7 +77,7 @@ For this demo a simple django blog will be created from a tutorial found at:
 
 http://www.creativebloq.com/netmag/get-started-django-7132932
 
-NOTES: 
+NOTES:
 
 - When running the command to start the django project, go to another directory (say, /tmp) and run
     the django-admin.py command in the container as:
@@ -92,7 +92,7 @@ NOTES:
 
 After getting the blog up and working the next step is to exit the containers
 and push the work that was done in dcDemoBlog-web and dcDemoBlog-utils to
-github.  
+github.
 
 
 ### Joining existing development
@@ -136,7 +136,7 @@ github.
         - we use papertrail for a central logging system so the default values in the SYSLOG_ entries refer to that system but you
           put your logging system in there.  They do need to have something in them, hence the defaults.
 
-    - Go back to the dcUtils directory 
+    - Go back to the dcUtils directory
     - execute:
 
         ./deployenv.sh
@@ -148,7 +148,7 @@ github.
 
 5. When the containers start up, the web container will have the dcDemoBlog/dcDemoBlog-web directory hosted as a volume in the container and
 the login directory will correspond with that directory.
-The login directory is: /data/deploy/current   
+The login directory is: /data/deploy/current
 At this point, a good suggestion would be to open another terminal window such that you can log into the web container in one terminal window.
 This way you can run the commands to create the django project inside the container, and then once they are created you can edit the files on
 your host using your normal editing tools.  The changes will show up in the container and the hosts because they refer to the same place.
@@ -158,7 +158,7 @@ your host using your normal editing tools.  The changes will show up in the cont
         ./enter-container.sh
             - Select the web container
 
-    You will need to create the database the very first time you bring down the images and start the containers as the database will be empty.  
+    You will need to create the database the very first time you bring down the images and start the containers as the database will be empty.
     Outside of this demo, you would restore a database from a backup at this point to get it up to speed. In this case we want to start with an
     empty database, but we at least need to create one.  So type:
 
