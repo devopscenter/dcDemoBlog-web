@@ -78,8 +78,9 @@ For this demo a simple django blog will be created from a tutorial found at:
 http://www.creativebloq.com/netmag/get-started-django-7132932
 
 NOTES: 
+
     - When running the command to start the django project, go to another directory (say, /tmp) and run
-        the django-admin.py command in the container as:
+    the django-admin.py command in the container as:
 
             django-admin.py startproject dcDemoBlog /data/deploy/current
 
