@@ -116,13 +116,13 @@ github.
         --appName (-a)       => the application name
         --baseDirectory (-d) => the base directory into which the application will be placed
         --command (-c)       => the command, in this case create
-        --appURL             => the github URL for the application web content
-        --utilsURL           => the github URL for the application utils content
+        --appPath             => the github URL for the application web content
+        --utilsPath           => the github URL for the application utils content
 
     So type (NOTE: use the path created in step 1):
 
-        ./manageApp.py -a dcDemoBlog -d ~/dcDemo/apps -c join --appURL \
-            https://github.com/devopscenter/dcDemoBlog-web.git --utilsURL \
+        ./manageApp.py -a dcDemoBlog -d ~/dcDemo/apps -c join --appPath \
+            https://github.com/devopscenter/dcDemoBlog-web.git --utilsPath \
             https://github.com/devopscenter/dcDemoBlog-utils.git
 
 
